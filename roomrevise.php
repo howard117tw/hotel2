@@ -21,18 +21,20 @@
 
   }else{
 
-  	$room=$_POST['status'];
-  	echo $_SESSION['a']["$_SESSION[key]"];
-  	$temp = $_SESSION['a']["$_SESSION[key]"];
-  	$sql = "  UPDATE room SET 房間狀態='$room' WHERE 房號=$temp  " ;
+  	$id=$_GET['id'];
+    //echo "$id";
+    $room=$_POST['status'];
+    // echo $_SESSION['a']["$_SESSION[key]"];
+    // $temp = $_SESSION['a']["$_SESSION[key]"];
+    $sql = "  UPDATE room SET 房間狀態='$room' WHERE 房號=$id  " ;
   
-  	if ($link->query($sql) === TRUE) {
+    if ($link->query($sql) === TRUE) {
     //echo "New record created successfully，點擊跳轉回登入頁面";
     //echo '<a href="http:/localhost/login.html" >登入</a>';
     header("Location:functionpage.html");
-  } else {
+    } else {
     echo "Error: " . $sql . "<br>" . $link->error;
-  }
+   }
 
   $link->close();
   }
