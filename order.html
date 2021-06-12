@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>訂房表單</title>
+</head>
+<body>
+	<form action="order.php" method="post" >
+        <table align="center" bgcolor="#FFFFCC">
+            <tr>
+                <td><font size="5" color="blue">輸入個人資料</td>
+            </tr>
+            <tr>
+                <td><font size="2">訂購者姓名:</font></td>
+                <td><input type="text" name="Name" size="15" /></td>
+            </tr>
+            <tr>
+                <td><font size="2">手機號碼:</font></td>
+                <td><input type="text" name="PhoneNumber" size="15" /></td>
+            </tr>
+            <tr>
+                <td><font size="2">email:</font></td>
+                <td><input type="text" name="email" size="15" /></td>
+            </tr>
+            <tr>
+                <td><font size="2">入住日期:</font></td>
+                <td><input type="date" name="CheckinDate" size="15"/></td>
+            </tr>
+            <tr>
+                <td><font size="2">退房日期:</font></td>
+                <td><input type="date" name="CheckoutDate" size="15"/></td>
+            </tr>
+            <tr>
+                <td><font size="2">房型:</font></td>
+                <td><select name="RoomType">
+                		<option value="單人房">單人房</option>
+                		<option value="雙人房">雙人房</option>
+                		<option value="家庭四人房">家庭四人房</option>
+                </select> </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="送出訂單"/></td>
+            </tr> 
+        </table>
+    </form>
+
+</body>
+</html>
